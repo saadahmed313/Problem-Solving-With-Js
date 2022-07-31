@@ -1,7 +1,12 @@
 function remove_char_from(word, c){
-  
-    return word.split("").filter((e) => e !== c.toUpperCase() && e !== c.toLowerCase()  ).join("")
+
+    return word.replaceAll(new RegExp(c,"ig"),"");
 };
+//Anthor sluotion
+// function remove_char_from(word, c){
+  
+//     return word.split("").filter((e) => e !== c.toUpperCase() && e !== c.toLowerCase()  ).join("")
+// };
 
 // Testing Ouput
 console.log(remove_char_from("ElddzeroD WebDD ddSchool", "d")); // Elzero Web School
